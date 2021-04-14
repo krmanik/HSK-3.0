@@ -8,10 +8,10 @@ The words list with meaning generated using
 - [wiktionary, Mandarin Frequency lists](https://en.wiktionary.org/wiki/Appendix:Mandarin_Frequency_lists)
 
 ## How it generated?
-The meanings in `HSK list with meaning (Source 2)` taken in following order
-1. If found in `wiktionary` then get meaning
-2. Else take meaning from `CC-CEDICT` 
-3. If not found then translate using Google Translate
+The meanings in `HSK list with meaning` taken in following order
+1. if found in `wiktionary` then get meaning
+2. else take meaning from `CC-CEDICT` 
+3. if not found then translate using Google Translate
 
 ### Note:
 - The meaning translated using Google when not found in CC-CEDICT.
