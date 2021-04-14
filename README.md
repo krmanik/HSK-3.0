@@ -1,7 +1,5 @@
 # HSK 3.0 words list
 
-# Note: Some meanings are merged for multiple pinyin. To be updated.
-
 The words list with meaning generated using
 - [word list shared by Pleco](https://plecoforums.com/threads/hsk-3-0-flashcards.6706/)
 - [CC-CEDICT](https://cc-cedict.org/wiki/)
