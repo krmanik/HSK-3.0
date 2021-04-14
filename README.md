@@ -7,13 +7,11 @@ The words list with meaning generated using
 - [Anki Chinese Vocabulary Generator](https://github.com/infinyte7/Anki-Chinese-Vocabulary-Generator)
 - [wiktionary, Mandarin Frequency lists](https://en.wiktionary.org/wiki/Appendix:Mandarin_Frequency_lists)
 
-## Note
+## How it generated?
 The meanings in `HSK list with meaning (Source 2)` taken in following order
-1. If found in `Wikipedia` then get meaning
+1. If found in `wiktionary` then get meaning
 2. Else take meaning from `CC-CEDICT` 
 3. If not found then translate using Google Translate
-
-These list will be better than `Source 1`.
 
 ### Note:
 - The meaning translated using Google when not found in CC-CEDICT.
