@@ -13,6 +13,47 @@ The meanings in `HSK list with meaning` taken in following order
 2. else take meaning from `CC-CEDICT` 
 3. if not found then translate using Google Translate
 
+
+## Scripts and data
+The `Scripts and data` contains files that used to create HSK 3.0 lists.
+
+The main.py is used to create HSK 3.0 word list with meaning. The script is not so optimized, it may need improvements.
+
+### Data
+The following data used to generate list
+- 10k Mandarin from wiktionary
+- all_cedict.json
+- HSK 1.txt to HSK 7-9.txt (view in the folder)
+
+The following data generated
+- HSK 1 to HSK 7-9 with clear meaning .txt files (view in the folder)
+- tsv list for importing in Anki
+
+### For running the script
+1. Install Python
+2. Install following python modules using `pip`
+
+```
+pinyin
+pycedict
+hanziconv
+googletrans
+pinyin_jyutping_sentence
+```
+3. The script reads characters/words per line and fetch meaning. Then it write the data .txt files
+4. Uncomment functions to use the script
+```
+# uncomment below and run
+# get_meaning()
+
+
+# some other helper functions
+# find_dup()
+
+# get_sound()
+# count_field()
+```
+
 ### Note:
 - The meaning translated using Google when not found in CC-CEDICT.
-- This generated using python program, may contain errors.
+- This generated using python program, may contain errors and need improvements.
