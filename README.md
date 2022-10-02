@@ -57,3 +57,6 @@ pinyin_jyutping_sentence
 ### Note:
 - The meaning translated using Google when not found in CC-CEDICT.
 - This generated using python program, may contain errors and need improvements.
+
+### License
+View [License](License.md)
