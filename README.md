@@ -54,6 +54,18 @@ pinyin_jyutping_sentence
 # count_field()
 ```
 
+## Find duplicates
+```
+cd HSK-3.0-words-list/Scripts and data/
+python dups.py
+```
+
+## Generate Zhuyin
+```
+cd HSK-3.0-words-list/Scripts and data/
+python to_zhuyin.py
+```
+
 ### Note:
 - The meaning translated using Google when not found in CC-CEDICT.
 - This generated using python program, may contain errors and need improvements.
