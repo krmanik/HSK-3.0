@@ -13,6 +13,10 @@ The meanings in `HSK list with meaning` taken in following order
 2. else take meaning from `CC-CEDICT` 
 3. if not found then translate using Google Translate
 
+## HSK Grammar
+- [HSK Grammar](https://github.com/krmanik/HSK-3.0-words-list/tree/main/HSK%20Grammar)
+
+The Grammar OCRed using Foxit Reader and Microsoft Snipping tool. It may contain some errors.
 
 ## Scripts and data
 The [Scripts and data](https://github.com/krmanik/HSK-3.0-words-list/tree/main/Scripts%20and%20data) contains files that used to create HSK 3.0 lists.
