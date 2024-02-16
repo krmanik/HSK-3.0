@@ -1,3 +1,7 @@
+# License
+
+> http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/W020210329527301787356.pdf
+
 ### CC-CEDICT
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 

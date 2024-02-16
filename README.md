@@ -1,82 +1,48 @@
-# HSK 3.0 words list
+# HSK 3.0
 
-The words list with meaning generated using
-- [word list shared by Pleco](https://plecoforums.com/threads/hsk-3-0-flashcards.6706/)
-- [CC-CEDICT](https://cc-cedict.org/wiki/)
-- [cedict-json](https://github.com/krmanik/cedict-json)
-- [Anki Chinese Vocabulary Generator](https://github.com/krmanik/Anki-Chinese-Vocabulary-Generator)
-- [wiktionary, Mandarin Frequency lists](https://en.wiktionary.org/wiki/Appendix:Mandarin_Frequency_lists)
+The repository contains HSK 3.0 (HSK 1 - HSK 9) Hanzi, Handwritten, Word and Grammar list. It also contains list for [Anki decks](https://github.com/krmanik/Anki-xiehanzi) with frequency, pinyin, zhuyin and meaning.
 
-## How it generated?
-The meanings in `HSK list with meaning` taken in following order
-1. if found in `wiktionary` then get meaning
-2. else take meaning from `CC-CEDICT` 
-3. if not found then translate using Google Translate
+The HSK 3.0 PDF file OCRed and saved as text files.<br>http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/W020210329527301787356.pdf
 
-## HSK Grammar
-- [HSK Grammar](https://github.com/krmanik/HSK-3.0-words-list/tree/main/HSK%20Grammar)
+> If you find this repository useful then consider staring this repository.
 
-The Grammar OCRed using Foxit Reader and Microsoft Snipping tool. It may contain some errors.
+## [HSK Hanzi](https://github.com/krmanik/HSK-3.0-words-list/tree/main/HSK%20Hanzi)
 
-## HSK Hanzi
+- [HSK 1](HSK%20Hanzi/HSK%201.txt)
+- [HSK 2](HSK%20Hanzi/HSK%202.txt)
+- [HSK 3](HSK%20Hanzi/HSK%203.txt)
+- [HSK 4](HSK%20Hanzi/HSK%204.txt)
+- [HSK 5](HSK%20Hanzi/HSK%205.txt)
+- [HSK 6](HSK%20Hanzi/HSK%206.txt)
+- [HSK 7-9](HSK%20Hanzi/HSK%207-9.txt)
 
-- [HSK Hanzi](https://github.com/krmanik/HSK-3.0-words-list/tree/main/HSK%20Hanzi)
+## [HSK Handwritten](https://github.com/krmanik/HSK-3.0-words-list/tree/main/HSK%20Handwritten)
 
-## Scripts and data
-The [Scripts and data](https://github.com/krmanik/HSK-3.0-words-list/tree/main/Scripts%20and%20data) contains files that used to create HSK 3.0 lists.
+- [Elementary](HSK%20Handwritten/Elementary.txt)
+- [Medium](HSK%20Handwritten/Medium.txt)
+- [Advanced](HSK%20Handwritten/Advanced.txt)
 
-The [main.py](https://github.com/krmanik/HSK-3.0-words-list/blob/main/Scripts%20and%20data/main.py) is used to create HSK 3.0 word list with meaning. The script is not so optimized, it may need improvements.
+## [HSK Word](https://github.com/krmanik/HSK-3.0-words-list/tree/main/HSK%20List)
 
-### Data
-The following data used to generate list
-- [10k Mandarin from wiktionary](https://github.com/krmanik/HSK-3.0-words-list/blob/main/Scripts%20and%20data/10k%20Mandarin.txt)
-- [all_cedict.json](https://github.com/krmanik/HSK-3.0-words-list/blob/main/Scripts%20and%20data/all_cedict.json)
-- HSK 1.txt to HSK 7-9.txt (view in the folder)
+- [HSK 1](HSK%20List/HSK%201.txt)
+- [HSK 2](HSK%20List/HSK%202.txt)
+- [HSK 3](HSK%20List/HSK%203.txt)
+- [HSK 4](HSK%20List/HSK%204.txt)
+- [HSK 5](HSK%20List/HSK%205.txt)
+- [HSK 6](HSK%20List/HSK%206.txt)
+- [HSK 7-9](HSK%20List/HSK%207-9.txt)
 
-The following data generated (view in the folder)
-- HSK 1 to HSK 7-9 with clear meaning .txt files 
-- tsv list for importing in Anki
+> Download Anki-xiehanzi decks from here,<br>https://github.com/krmanik/Anki-xiehanzi
 
-### For running the script
-1. Install Python
-2. Install following python modules using `pip`
+## [HSK Grammar](https://github.com/krmanik/HSK-3.0-words-list/tree/main/HSK%20Grammar)
 
-```
-pinyin
-pycedict
-hanziconv
-googletrans
-pinyin_jyutping_sentence
-```
-3. The script reads characters/words per line and fetch meaning. Then it write the data .txt files
-4. Uncomment functions to use the script
-```
-# uncomment below and run
-# get_meaning()
-
-
-# some other helper functions
-# find_dup()
-
-# get_sound()
-# count_field()
-```
-
-## Find duplicates
-```
-cd HSK-3.0-words-list/Scripts and data/
-python dups.py
-```
-
-## Generate Zhuyin
-```
-cd HSK-3.0-words-list/Scripts and data/
-python to_zhuyin.py
-```
-
-### Note:
-- The meaning translated using Google when not found in CC-CEDICT.
-- This generated using python program, may contain errors and need improvements.
+- [HSK 1](HSK%20Grammar/HSK%201.txt)
+- [HSK 2](HSK%20Grammar/HSK%202.txt)
+- [HSK 3](HSK%20Grammar/HSK%203.txt)
+- [HSK 4](HSK%20Grammar/HSK%204.txt)
+- [HSK 5](HSK%20Grammar/HSK%205.txt)
+- [HSK 6](HSK%20Grammar/HSK%206.txt)
+- [HSK 7-9](HSK%20Grammar/HSK%207-9.txt)
 
 ### License
 View [License](License.md)
