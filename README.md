@@ -18,6 +18,10 @@ The meanings in `HSK list with meaning` taken in following order
 
 The Grammar OCRed using Foxit Reader and Microsoft Snipping tool. It may contain some errors.
 
+## HSK Hanzi
+
+- [HSK Hanzi](https://github.com/krmanik/HSK-3.0-words-list/tree/main/HSK%20Hanzi)
+
 ## Scripts and data
 The [Scripts and data](https://github.com/krmanik/HSK-3.0-words-list/tree/main/Scripts%20and%20data) contains files that used to create HSK 3.0 lists.
 
