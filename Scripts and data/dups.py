@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 def find_dups(file):
     with open(file, "r", encoding="utf-8") as f:
         words = f.read()
@@ -25,6 +27,23 @@ def find_dups(file):
     print(f"Results saved to '{output_file}'\n")
 
 
+def find_and_save_common_words(file_paths, output_file):
+    word_occurrences = defaultdict(list)
+
+    for file_path in file_paths:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            words = set(file.read().split())
+            for word in words:
+                word_occurrences[word].append(file_path)
+
+    common_words = {word: files for word, files in word_occurrences.items() if len(files) > 1}
+
+    with open(output_file, 'w', encoding='utf-8') as file:
+        for word, files in common_words.items():
+            files = ', '.join(files).replace(root, '').replace('.txt', '')
+            file.write(f"{word} [{files}]\n")
+
+
 root = "../HSK List/"
 
 files = [
@@ -39,3 +58,8 @@ files = [
 
 for file in files:
     find_dups(file)
+
+output_file = f"duplicates_across_files.txt"
+
+find_and_save_common_words(files, output_file)
+print(f'Common words across files saved to {output_file}')
