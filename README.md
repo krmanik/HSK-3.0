@@ -12,7 +12,7 @@ The repository contains HSK 3.0 (HSK 1 - HSK 9) Hanzi, Handwritten, Word and Gra
 
 # 2025-11
 
-## HSK Words
+## [HSK Words](New%20HSK%20(2025)/HSK%20Words)
 
 - [HSK 1](New%20HSK%20(2025)/HSK%20Words/HSK_Level_1_words.txt)
 - [HSK 2](New%20HSK%20(2025)/HSK%20Words/HSK_Level_2_words.txt)
@@ -22,7 +22,7 @@ The repository contains HSK 3.0 (HSK 1 - HSK 9) Hanzi, Handwritten, Word and Gra
 - [HSK 6](New%20HSK%20(2025)/HSK%20Words/HSK_Level_6_words.txt)
 - [HSK 7-9](New%20HSK%20(2025)/HSK%20Words/HSK_Level_7-9_words.txt)
 
-## HSK Hanzi
+## [HSK Hanzi](New%20HSK%20(2025)/HSK%20Hanzi)
 
 - [HSK 1](New%20HSK%20(2025)/HSK%20Hanzi/HSK_Level_1_hanzi.txt)
 - [HSK 2](New%20HSK%20(2025)/HSK%20Hanzi/HSK_Level_2_hanzi.txt)
@@ -33,7 +33,7 @@ The repository contains HSK 3.0 (HSK 1 - HSK 9) Hanzi, Handwritten, Word and Gra
 - [HSK 7-9](New%20HSK%20(2025)/HSK%20Hanzi/HSK_Level_7-9_hanzi.txt)
 
 
-## HSK Handwritten
+## [HSK Handwritten](New%20HSK%20(2025)/HSK%20Handwritten)
 
 - [HSK 1-2](New%20HSK%20(2025)/HSK%20Handwritten/HSK_Level_1-2_handwritten.txt)
 - [HSK 3](New%20HSK%20(2025)/HSK%20Handwritten/HSK_Level_3_handwritten.txt)
