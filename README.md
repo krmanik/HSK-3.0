@@ -43,7 +43,8 @@ The repository contains HSK 3.0 (HSK 1 - HSK 9) Hanzi, Handwritten, Word and Gra
 
 <br>
 
-# 2021-03
+<details>
+<summary>2021-03</summary>
 
 It also contains list for [Anki decks](https://github.com/krmanik/Anki-xiehanzi) with frequency, pinyin, zhuyin and meaning.
 
@@ -84,6 +85,26 @@ It also contains list for [Anki decks](https://github.com/krmanik/Anki-xiehanzi)
 - [HSK 5](New%20HSK%20(2021)/HSK%20Grammar/HSK%205.txt)
 - [HSK 6](New%20HSK%20(2021)/HSK%20Grammar/HSK%206.txt)
 - [HSK 7-9](New%20HSK%20(2021)/HSK%20Grammar/HSK%207-9.txt)
+
+</details>
+
+<br>
+
+# BCT
+
+## [BCT Words](BCT)
+
+- [BCT A 词汇](BCT/BCTA_cihui.txt)
+- [BCT B 词汇](BCT/BCTB_cihui.txt)
+
+# YCT
+
+## [YCT Words](YCT)
+
+- [YCT Level 1](YCT/yct_level_1.tsv)
+- [YCT Level 2](YCT/yct_level_2.tsv)
+- [YCT Level 3](YCT/yct_level_3.tsv)
+- [YCT Level 4](YCT/yct_level_4.tsv)
 
 ### License
 View [License](License.md)

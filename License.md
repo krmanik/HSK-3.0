@@ -2,6 +2,8 @@
 
 > http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/W020210329527301787356.pdf
 
+> https://hsk.cn-bj.ufileos.com/3.0/%E6%96%B0%E7%89%88HSK%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B21219.pdf
+
 ### CC-CEDICT
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
@@ -26,3 +28,9 @@ https://github.com/krmanik/Anki-Chinese-Vocabulary-Generator
 ### HSK 3.0 word lists
 Mani<br>
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+### BCT word lists
+https://www.chinesetest.cn/
+
+### YCT word lists
+https://www.chinesetest.cn/
