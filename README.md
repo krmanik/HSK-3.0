@@ -41,6 +41,20 @@ The repository contains HSK 3.0 (HSK 1 - HSK 9) Hanzi, Handwritten, Word and Gra
 - [HSK 6](New%20HSK%20(2025)/HSK%20Handwritten/HSK_Level_6_handwritten.txt)
 - [HSK 7-9](New%20HSK%20(2025)/HSK%20Handwritten/HSK_Level_7-9_handwritten.txt)
 
+## [HSK Grammar](New%20HSK%20(2025)/HSK%20Grammar)
+
+Grammar points (语法) from the HSK 3.0 syllabus, as plain text and JSON.
+
+| Level | Text | JSON |
+| --- | --- | --- |
+| HSK 1 | [txt](New%20HSK%20(2025)/HSK%20Grammar/HSK%201.txt) | [json](New%20HSK%20(2025)/HSK%20Grammar/json/HSK%201.json) |
+| HSK 2 | [txt](New%20HSK%20(2025)/HSK%20Grammar/HSK%202.txt) | [json](New%20HSK%20(2025)/HSK%20Grammar/json/HSK%202.json) |
+| HSK 3 | [txt](New%20HSK%20(2025)/HSK%20Grammar/HSK%203.txt) | [json](New%20HSK%20(2025)/HSK%20Grammar/json/HSK%203.json) |
+| HSK 4 | [txt](New%20HSK%20(2025)/HSK%20Grammar/HSK%204.txt) | [json](New%20HSK%20(2025)/HSK%20Grammar/json/HSK%204.json) |
+| HSK 5 | [txt](New%20HSK%20(2025)/HSK%20Grammar/HSK%205.txt) | [json](New%20HSK%20(2025)/HSK%20Grammar/json/HSK%205.json) |
+| HSK 6 | [txt](New%20HSK%20(2025)/HSK%20Grammar/HSK%206.txt) | [json](New%20HSK%20(2025)/HSK%20Grammar/json/HSK%206.json) |
+| HSK 7-9 | [txt](New%20HSK%20(2025)/HSK%20Grammar/HSK%207-9.txt) | [json](New%20HSK%20(2025)/HSK%20Grammar/json/HSK%207-9.json) |
+
 <br>
 
 <details>
