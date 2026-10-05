@@ -3,5 +3,5 @@
     "applies_to": [
         "hsk_all_words.json"
     ],
-    "$comment": "The word list in this folder follows the HSK examination syllabus (中文水平考试HSK考试大纲), published November 2025 and in force from July 2026 - not the 2021 grading standard GF0025-2021. The two assign different levels to 41.5% of the vocabulary they share. Identifier from https://github.com/harukicoder/hsk30/blob/main/spec/standards.json (CC0)."
+    "$comment": "The word list in this folder follows the HSK examination syllabus (中文水平考试HSK考试大纲), published November 2025 and the basis of the HSK 3.0 exam from 13 December 2026 - not the 2021 grading standard GF0025-2021. The two assign different levels to 41.5% of the vocabulary they share."
 }
