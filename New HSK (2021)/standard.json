@@ -9,5 +9,5 @@
         "HSK List/HSK 6.txt",
         "HSK List/HSK 7-9.txt"
     ],
-    "$comment": "The word lists in HSK List/ follow the national grading standard 国际中文教育中文水平等级标准 (GF0025-2021), in force from July 2021 - not the 2025 examination syllabus. The two assign different levels to 41.5% of the vocabulary they share. Identifier from https://github.com/harukicoder/hsk30/blob/main/spec/standards.json (CC0)."
+    "$comment": "The word lists in HSK List/ follow the national grading standard 国际中文教育中文水平等级标准 (GF0025-2021), in force from July 2021 - not the 2025 examination syllabus. The two assign different levels to 41.5% of the vocabulary they share."
 }
