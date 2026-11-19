@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新版HSK考试大纲·语法</title>
+<style>
+  :root { --bd:#d0d7de; --hd:#1f6feb; --alt:#f6f8fa; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",Segoe UI,sans-serif;
+         margin:0; padding:24px; color:#1f2328; background:#fff; }
+  h1 { font-size:20px; margin:0 0 4px; }
+  .sub { color:#656d76; font-size:13px; margin:0 0 16px; }
+  .bar { margin:0 0 16px; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  input[type=search] { padding:6px 10px; border:1px solid var(--bd); border-radius:6px; font-size:14px; min-width:220px; }
+  .count { color:#656d76; font-size:13px; }
+  table { border-collapse:collapse; width:100%; font-size:14px; }
+  th,td { border:1px solid var(--bd); padding:6px 10px; text-align:left; vertical-align:top; }
+  thead th { background:var(--hd); color:#fff; position:sticky; top:0; }
+  td.cat { font-weight:600; background:var(--alt); white-space:nowrap; }
+  td.name { white-space:nowrap; }
+  td.detail { white-space:nowrap; color:#0550ae; }
+  tbody tr:hover td:not(.cat) { background:#fffbdd; }
+  .err { color:#cf222e; }
+  .file { font-size:13px; }
+  mark { background:#ffe08a; padding:0; }
+</style>
+</head>
+<body>
+  <h1>新版HSK考试大纲 · 语法</h1>
+  <p class="sub" id="src"></p>
+  <div class="bar">
+    <label class="file">级别 / level:
+      <select id="lvl">
+        <option value="HSK 1">HSK 1</option>
+        <option value="HSK 2">HSK 2</option>
+        <option value="HSK 3">HSK 3</option>
+        <option value="HSK 4">HSK 4</option>
+        <option value="HSK 5">HSK 5</option>
+        <option value="HSK 6">HSK 6</option>
+        <option value="HSK 7-9">HSK 7-9</option>
+      </select>
+    </label>
+    <input type="search" id="q" placeholder="搜索 / filter…">
+    <span class="count" id="count"></span>
+    <label class="file">本地打开 JSON: <input type="file" id="picker" accept=".json,application/json"></label>
+  </div>
+  <div id="out"></div>
+
+<script>
+const LEVELS = ["HSK 1","HSK 2","HSK 3","HSK 4","HSK 5","HSK 6","HSK 7-9"];
+const fileFor = lvl => lvl+".json";
+const COLS = ["类别","类别名称","细目","语法内容"];
+let rows = [];
+
+function esc(s){ return (s||"").replace(/[&<>]/g, c=>({ "&":"&amp;","<":"&lt;",">":"&gt;" }[c])); }
+function hl(s,q){ s=esc(s); if(!q) return s;
+  return s.replace(new RegExp("("+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi"),"<mark>$1</mark>"); }
+
+// rowspan over identical consecutive values, but only if all higher-priority cols also match
+function spanFor(data, i, col){
+  const cur = data[i];
+  let n=1;
+  for(let j=i+1;j<data.length;j++){
+    let ok=true;
+    for(let c=0;c<=col;c++){ if(data[j][COLS[c]]!==cur[COLS[c]]){ ok=false; break; } }
+    if(!ok) break; n++;
+  }
+  // is this the first row of the run?
+  let first=true;
+  for(let c=0;c<=col;c++){ if(i>0 && data[i-1][COLS[c]]===cur[COLS[c]]){} }
+  return n;
+}
+function isRunStart(data,i,col){
+  if(i===0) return true;
+  for(let c=0;c<=col;c++){ if(data[i-1][COLS[c]]!==data[i][COLS[c]]) return true; }
+  return false;
+}
+
+function render(q){
+  q=(q||"").trim();
+  const data = q ? rows.filter(r=>COLS.some(c=>(r[c]||"").toLowerCase().includes(q.toLowerCase()))) : rows;
+  document.getElementById("count").textContent = data.length+" / "+rows.length+" 行";
+  if(!data.length){ document.getElementById("out").innerHTML="<p>无匹配 / no match</p>"; return; }
+  let h="<table><thead><tr>"+COLS.map(c=>"<th>"+c+"</th>").join("")+"</tr></thead><tbody>";
+  const cls=["cat","name","detail","content"];
+  for(let i=0;i<data.length;i++){
+    h+="<tr>";
+    for(let c=0;c<COLS.length;c++){
+      const val=data[i][COLS[c]];
+      if(c<3 && !q){ // merge structural cols only when unfiltered
+        if(!isRunStart(data,i,c)) continue;
+        const rs=spanFor(data,i,c);
+        h+="<td class='"+cls[c]+"'"+(rs>1?" rowspan='"+rs+"'":"")+">"+hl(val,q)+"</td>";
+      } else {
+        h+="<td class='"+cls[c]+"'>"+hl(val,q)+"</td>";
+      }
+    }
+    h+="</tr>";
+  }
+  h+="</tbody></table>";
+  document.getElementById("out").innerHTML=h;
+}
+
+function load(data, srcLabel){
+  rows=data; document.getElementById("src").textContent=srcLabel+" · "+rows.length+" 行";
+  render(document.getElementById("q").value);
+}
+
+function loadLevel(lvl){
+  const file=fileFor(lvl);
+  fetch(file)
+    .then(r=>{ if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); })
+    .then(d=>load(d, file))
+    .catch(err=>{
+      document.getElementById("out").innerHTML=
+        "<p class='err'>无法自动加载 "+esc(file)+" ("+esc(err.message)+
+        ")。<br>用上方“本地打开 JSON”选择文件，或通过本地服务器打开 (如 <code>python3 -m http.server</code>)。</p>";
+    });
+}
+
+document.getElementById("q").addEventListener("input", e=>render(e.target.value));
+document.getElementById("lvl").addEventListener("change", e=>loadLevel(e.target.value));
+document.getElementById("picker").addEventListener("change", e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{ try{ load(JSON.parse(r.result), f.name); }catch(err){ document.getElementById("out").innerHTML="<p class='err'>解析失败: "+esc(err.message)+"</p>"; } };
+  r.readAsText(f);
+});
+
+loadLevel(document.getElementById("lvl").value);
+</script>
+</body>
+</html>
